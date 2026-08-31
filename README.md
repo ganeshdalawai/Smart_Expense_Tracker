@@ -1,6 +1,6 @@
-# 💰 FinTrack – Personal Finance Management System
+# 💰 Smart Expense Tracker
 
-FinTrack is a full-stack personal finance management application designed to help users track their income and expenses, manage budgets, analyze spending patterns, and receive AI-powered financial insights.
+A full-stack personal finance management system for tracking expenses, managing budgets, analyzing spending patterns, and generating financial insights.
 
 The application provides an interactive dashboard with financial summaries, spending analytics, budget recommendations, expense predictions, and financial health analysis.
 
