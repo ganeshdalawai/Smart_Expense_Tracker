@@ -1,0 +1,456 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* =========================================================
+   FINTRACK - GLOBAL CUSTOM THEME
+   Navy + Cyan + Teal
+   ========================================================= */
+
+:root {
+  --primary: #06b6d4;
+  --primary-dark: #0891b2;
+  --primary-light: #67e8f9;
+
+  --secondary: #14b8a6;
+  --secondary-dark: #0f766e;
+
+  --success: #22c55e;
+  --warning: #f59e0b;
+  --danger: #f43f5e;
+
+  --page-background: #07111f;
+  --page-background-2: #0b1b2d;
+
+  --card-background: #101f33;
+  --card-background-light: #14263d;
+
+  --sidebar-background: #06101d;
+
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+
+  --border-color: #243b53;
+}
+
+/* =========================================================
+   BASE
+   ========================================================= */
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(6, 182, 212, 0.12),
+      transparent 35%
+    ),
+    linear-gradient(
+      135deg,
+      var(--page-background),
+      var(--page-background-2)
+    );
+
+  color: var(--text-primary);
+}
+
+/* =========================================================
+   PURPLE GRADIENT REPLACEMENT
+   ========================================================= */
+
+/* from-purple-* */
+[class*="from-purple-"] {
+  --tw-gradient-from: #07111f var(--tw-gradient-from-position) !important;
+  --tw-gradient-to: rgba(7, 17, 31, 0) var(--tw-gradient-to-position) !important;
+}
+
+/* via-purple-* */
+[class*="via-purple-"] {
+  --tw-gradient-to: rgba(15, 118, 110, 0) var(--tw-gradient-to-position) !important;
+  --tw-gradient-stops:
+    var(--tw-gradient-from),
+    #0f766e var(--tw-gradient-via-position),
+    var(--tw-gradient-to) !important;
+}
+
+/* to-purple-* */
+[class*="to-purple-"] {
+  --tw-gradient-to: #164e63 var(--tw-gradient-to-position) !important;
+}
+
+/* =========================================================
+   BLUE GRADIENT REPLACEMENT
+   ========================================================= */
+
+[class*="from-blue-"] {
+  --tw-gradient-from: #0f172a var(--tw-gradient-from-position) !important;
+}
+
+[class*="via-blue-"] {
+  --tw-gradient-stops:
+    var(--tw-gradient-from),
+    #0e7490 var(--tw-gradient-via-position),
+    var(--tw-gradient-to) !important;
+}
+
+[class*="to-blue-"] {
+  --tw-gradient-to: #155e75 var(--tw-gradient-to-position) !important;
+}
+
+/* =========================================================
+   PURPLE BACKGROUNDS
+   ========================================================= */
+
+[class*="bg-purple-"] {
+  background-color: #0f766e !important;
+}
+
+/* Purple transparent backgrounds */
+[class*="bg-purple-"][class*="/"] {
+  background-color: rgba(20, 184, 166, 0.15) !important;
+}
+
+/* =========================================================
+   BLUE BACKGROUNDS
+   ========================================================= */
+
+[class*="bg-blue-"] {
+  background-color: #0891b2 !important;
+}
+
+[class*="bg-blue-"][class*="/"] {
+  background-color: rgba(6, 182, 212, 0.15) !important;
+}
+
+/* =========================================================
+   INDIGO BACKGROUNDS
+   ========================================================= */
+
+[class*="bg-indigo-"] {
+  background-color: #155e75 !important;
+}
+
+[class*="bg-indigo-"][class*="/"] {
+  background-color: rgba(8, 145, 178, 0.15) !important;
+}
+
+/* =========================================================
+   SLATE BACKGROUNDS
+   ========================================================= */
+
+.bg-slate-800,
+.bg-slate-850 {
+  background-color: var(--card-background) !important;
+}
+
+.bg-slate-900 {
+  background-color: #0b1728 !important;
+}
+
+.bg-slate-950 {
+  background-color: var(--sidebar-background) !important;
+}
+
+/* Transparent slate cards */
+[class*="bg-slate-800/"] {
+  background-color: rgba(16, 31, 51, 0.88) !important;
+}
+
+[class*="bg-slate-900/"] {
+  background-color: rgba(11, 23, 40, 0.9) !important;
+}
+
+/* =========================================================
+   TEXT COLORS
+   ========================================================= */
+
+/* Blue text -> cyan */
+.text-blue-400,
+.text-blue-500,
+.text-blue-600 {
+  color: var(--primary) !important;
+}
+
+.text-blue-300 {
+  color: #67e8f9 !important;
+}
+
+/* Purple text -> teal */
+.text-purple-300,
+.text-purple-400,
+.text-purple-500,
+.text-purple-600 {
+  color: #2dd4bf !important;
+}
+
+/* Indigo text */
+.text-indigo-400,
+.text-indigo-500,
+.text-indigo-600 {
+  color: #22d3ee !important;
+}
+
+/* =========================================================
+   BORDERS
+   ========================================================= */
+
+[class*="border-purple-"] {
+  border-color: rgba(20, 184, 166, 0.35) !important;
+}
+
+[class*="border-blue-"] {
+  border-color: rgba(6, 182, 212, 0.35) !important;
+}
+
+[class*="border-indigo-"] {
+  border-color: rgba(34, 211, 238, 0.35) !important;
+}
+
+/* =========================================================
+   RINGS
+   ========================================================= */
+
+[class*="ring-purple-"] {
+  --tw-ring-color: #14b8a6 !important;
+}
+
+[class*="ring-blue-"] {
+  --tw-ring-color: #06b6d4 !important;
+}
+
+[class*="ring-indigo-"] {
+  --tw-ring-color: #22d3ee !important;
+}
+
+/* =========================================================
+   HOVER COLORS
+   ========================================================= */
+
+[class*="hover:bg-purple-"]:hover {
+  background-color: #0f766e !important;
+}
+
+[class*="hover:bg-blue-"]:hover {
+  background-color: #0891b2 !important;
+}
+
+[class*="hover:bg-indigo-"]:hover {
+  background-color: #155e75 !important;
+}
+
+[class*="hover:text-purple-"]:hover {
+  color: #2dd4bf !important;
+}
+
+[class*="hover:text-blue-"]:hover {
+  color: #22d3ee !important;
+}
+
+/* =========================================================
+   BUTTON PRIMARY
+   ========================================================= */
+
+button.bg-blue-500,
+button.bg-blue-600,
+a.bg-blue-500,
+a.bg-blue-600 {
+  background: linear-gradient(
+    135deg,
+    #0891b2,
+    #0f766e
+  ) !important;
+
+  border-color: rgba(103, 232, 249, 0.25) !important;
+}
+
+button.bg-blue-500:hover,
+button.bg-blue-600:hover,
+a.bg-blue-500:hover,
+a.bg-blue-600:hover {
+  background: linear-gradient(
+    135deg,
+    #06b6d4,
+    #14b8a6
+  ) !important;
+}
+
+/* =========================================================
+   PROGRESS BARS
+   ========================================================= */
+
+.bg-blue-500,
+.bg-blue-600 {
+  --tw-bg-opacity: 1;
+}
+
+[class*="bg-blue-"] {
+  background-color: #06b6d4 !important;
+}
+
+/* =========================================================
+   SHADOWS
+   ========================================================= */
+
+.shadow-glass {
+  box-shadow:
+    0 8px 32px rgba(6, 182, 212, 0.12),
+    0 2px 8px rgba(0, 0, 0, 0.25) !important;
+}
+
+.shadow-glass-dark {
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.4) !important;
+}
+
+/* =========================================================
+   GLOW EFFECTS
+   ========================================================= */
+
+[class*="shadow-blue-"] {
+  --tw-shadow-color: rgba(6, 182, 212, 0.3) !important;
+}
+
+[class*="shadow-purple-"] {
+  --tw-shadow-color: rgba(20, 184, 166, 0.3) !important;
+}
+
+/* =========================================================
+   FOCUS
+   ========================================================= */
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+
+  border-color: var(--primary) !important;
+
+  box-shadow:
+    0 0 0 3px rgba(6, 182, 212, 0.15) !important;
+}
+
+/* =========================================================
+   SCROLLBAR
+   ========================================================= */
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #07111f;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #155e75;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0891b2;
+}
+
+/* =========================================================
+   DARK MODE
+   ========================================================= */
+
+.dark body {
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(6, 182, 212, 0.12),
+      transparent 35%
+    ),
+    linear-gradient(
+      135deg,
+      #06101d,
+      #0b1b2d
+    );
+
+  color: #f8fafc;
+}
+
+/* Dark cards */
+.dark .bg-slate-800,
+.dark .bg-slate-850 {
+  background-color: #101f33 !important;
+}
+
+.dark .bg-slate-900 {
+  background-color: #0b1728 !important;
+}
+
+.dark .bg-slate-950 {
+  background-color: #06101d !important;
+}
+
+/* =========================================================
+   SUCCESS
+   ========================================================= */
+
+.text-green-400,
+.text-green-500,
+.text-green-600 {
+  color: #22c55e !important;
+}
+
+.bg-green-500 {
+  background-color: #22c55e !important;
+}
+
+[class*="bg-green-500/"] {
+  background-color: rgba(34, 197, 94, 0.15) !important;
+}
+
+/* =========================================================
+   WARNING
+   ========================================================= */
+
+.text-yellow-400,
+.text-yellow-500,
+.text-yellow-600 {
+  color: #f59e0b !important;
+}
+
+.bg-yellow-500 {
+  background-color: #f59e0b !important;
+}
+
+[class*="bg-yellow-500/"] {
+  background-color: rgba(245, 158, 11, 0.15) !important;
+}
+
+/* =========================================================
+   DANGER
+   ========================================================= */
+
+.text-red-400,
+.text-red-500,
+.text-red-600 {
+  color: #f43f5e !important;
+}
+
+.bg-red-500 {
+  background-color: #f43f5e !important;
+}
+
+[class*="bg-red-500/"] {
+  background-color: rgba(244, 63, 94, 0.15) !important;
+}
+
+/* =========================================================
+   SMOOTH TRANSITIONS
+   ========================================================= */
+
+* {
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
