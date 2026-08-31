@@ -114,7 +114,7 @@ The application provides an interactive dashboard with financial summaries, spen
 ## 🏗️ Project Architecture
 
 ```text
-FinTrack/
+Smart_Expense_Tracker/
 │
 ├── frontend/
 │   ├── src/
